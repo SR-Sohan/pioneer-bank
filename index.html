@@ -104,10 +104,10 @@
             const amountNumber = parseFloat(amount);
             return amountNumber;
         }
-        function spanToText(id,depositNumber){
+        function spanToText(id,addedNUmber){
         const current = document.getElementById(id).innerText;
         const currentNumber = parseFloat(current);
-        const total = currentNumber + depositNumber;
+        const total = currentNumber + addedNUmber;
         document.getElementById(id).innerText = total;
         }
 </script>
