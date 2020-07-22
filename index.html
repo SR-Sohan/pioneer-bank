@@ -65,6 +65,7 @@
         </div>
     </div>
  <script> 
+
         // Login button  area
         document.getElementById('login').addEventListener('click', function(){
             const logInArea = document.getElementById('login-area');
@@ -85,31 +86,32 @@
          })
 
          // Withdraw button area
-
         const withdrawBtn = document.getElementById('withDrawBtn');
             withdrawBtn.addEventListener('click', function(){
                 const withDrawAmountNumber = getInputNumber('withDrawAmount');
 
-               spanToText('currentWithDraw', withDrawAmountNumber);
-               spanToText('currentBalance', -1 * withDrawAmountNumber);
-
+                spanToText('currentWithDraw', withDrawAmountNumber);
+                spanToText('currentBalance', -1 * withDrawAmountNumber);
 
                 document.getElementById("withDrawAmount").value = '';
 
             })
 
-
+        // Input Number Function
         function getInputNumber(id){
             const amount = document.getElementById(id).value;
             const amountNumber = parseFloat(amount);
             return amountNumber;
         }
+
+        // button function
         function spanToText(id,addedNUmber){
-        const current = document.getElementById(id).innerText;
-        const currentNumber = parseFloat(current);
-        const total = currentNumber + addedNUmber;
-        document.getElementById(id).innerText = total;
+            const current = document.getElementById(id).innerText;
+            const currentNumber = parseFloat(current);
+            const total = currentNumber + addedNUmber;
+            document.getElementById(id).innerText = total;
         }
+        
 </script>
 </body>
 </html>
